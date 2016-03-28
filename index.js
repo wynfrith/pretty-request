@@ -52,6 +52,7 @@ function prettyRequest(uri, options) {
 function verbFunc (verb) {
   var method = verb === 'del' ? 'DELETE' : verb.toUpperCase();
   return function (uri, options) {
+    options = options || {};
     options.method = method;
     return prettyRequest(uri, options);
   }
