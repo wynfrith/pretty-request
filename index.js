@@ -2,6 +2,7 @@ var r = require('request');
 var Promise = require("bluebird");
 var co = require('co');
 var url = require('url');
+var iconv = require('iconv-lite');
 var requestDebug = require('request-debug');
 
 
@@ -16,6 +17,7 @@ function prettyRequest(uri, options) {
   }
 
   if (options.debug) requestDebug(r);
+  if (options.decode) options.encoding = null; //return buffer
   if (!options.followRedirect) options.followRedirect = false;
 
   return new Promise(function (resolve, reject) {
@@ -37,7 +39,7 @@ function prettyRequest(uri, options) {
         statusMessage: response.statusMessage,
         headers: response.headers,
         cookies: cookies,
-        body: body,
+        body: options.decode ?  iconv.decode(body, options.decode) : body,
         get raw() {
           return response;
         }

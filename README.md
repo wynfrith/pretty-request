@@ -11,4 +11,17 @@
 - 与request-promise相比返回值更加友好
 - 融合request-debug, 方便调试
 - 默认allowRedirect改为false
+- 可选择的body编码
 
+
+### 使用
+
+```javascript
+  yield prettyRequest.post( url , {
+            form: { key: value },
+            cookies: { key: value},
+            decode: 'gbk',
+            debug: true,
+            headers: headers
+          });
+```
