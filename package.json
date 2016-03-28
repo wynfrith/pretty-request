@@ -1,0 +1,32 @@
+{
+  "name": "pretty-request",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wynfrith/pretty-request.git"
+  },
+  "keywords": [
+    "request"
+  ],
+  "author": "wynfrith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wynfrith/pretty-request/issues"
+  },
+  "homepage": "https://github.com/wynfrith/pretty-request#readme",
+  "dependencies": {
+    "bluebird": "^3.3.4",
+    "iconv-lite": "^0.4.13",
+    "request": "^2.69.0",
+    "request-debug": "^0.2.0"
+  },
+  "devDependencies": {
+    "co": "^4.6.0",
+    "colors": "^1.1.2"
+  }
+}
