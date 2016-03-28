@@ -11,7 +11,7 @@
 - 与request-promise相比返回值更加友好
 - 融合request-debug, 方便调试
 - 默认allowRedirect改为false
-- 可选择的body编码
+- 可选择body解码方式
 
 
 ### 使用
