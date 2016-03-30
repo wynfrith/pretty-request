@@ -16,6 +16,9 @@
 
 ### 使用
 
+
+1. co 或 async/await
+
 ```javascript
   let res = yield prettyRequest.post( url , {
             form: { key: value },
@@ -25,12 +28,29 @@
             headers: headers
           });
 
+ // response
  console.log(res.body)
  console.log(res.statusCode)
  console.log(res.statusMessage)
  console.log(res.cookies) // { cookie1: value1, cookie2: value2 }
  console.log(res.headers)
- console.log(res.raw); // 未加工的reponse
+ console.log(res.raw); // 未加工的response
 ```
 
-更多功能参照 [request](https://www.npmjs.com/package/request)
+2. promise方式
+
+```javascript
+prettyRequest(url, {
+      form: { key: value },
+      cookies: { key: value},
+      decode: 'gbk',
+      debug: true,
+      headers: headers
+}).then((res) => {
+  // ...
+}).catch((err) => {
+    handleError(err);
+})
+```
+
+更多功能请参照 [request](https://www.npmjs.com/package/request)
