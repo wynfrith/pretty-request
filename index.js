@@ -1,6 +1,5 @@
 var r = require('request');
 var Promise = require("bluebird");
-var co = require('co');
 var url = require('url');
 var iconv = require('iconv-lite');
 var requestDebug = require('request-debug');
