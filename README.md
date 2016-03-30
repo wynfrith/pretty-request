@@ -32,3 +32,5 @@
  console.log(res.headers)
  console.log(res.raw); // 未加工的reponse
 ```
+
+更多功能参照 [request](https://www.npmjs.com/package/request)
