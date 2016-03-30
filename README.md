@@ -17,11 +17,18 @@
 ### 使用
 
 ```javascript
-  yield prettyRequest.post( url , {
+  let res = yield prettyRequest.post( url , {
             form: { key: value },
             cookies: { key: value},
             decode: 'gbk',
             debug: true,
             headers: headers
           });
+
+ console.log(res.body)
+ console.log(res.statusCode)
+ console.log(res.statusMessage)
+ console.log(res.cookies) // { cookie1: value1, cookie2: value2 }
+ console.log(res.headers)
+ console.log(res.raw); // 未加工的reponse
 ```
